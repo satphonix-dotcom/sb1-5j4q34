@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Hiragino Mincho ProN';
+    src: url('/fonts/HiraginoMinchoProN-W6.otf') format('opentype');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'Hiragino Mincho ProN';
+    src: url('/fonts/HiraginoMinchoProN-W3.otf') format('opentype');
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: 'Avenir';
+    src: url('/fonts/Avenir-Roman.woff2') format('woff2');
+    font-weight: 400;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply antialiased bg-velvet-dark text-velvet-light font-body font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  h1 {
+    @apply font-heading1 text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply font-heading2 text-3xl md:text-4xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-6 py-3 border border-velvet-accent text-sm font-medium text-velvet-accent hover:bg-velvet-accent hover:text-velvet-dark transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 border border-velvet-light text-sm font-medium text-velvet-light hover:bg-velvet-light hover:text-velvet-dark transition-colors duration-200;
+  }
+
+  .nav-link {
+    @apply text-velvet-light hover:text-velvet-accent transition-colors duration-200;
+  }
+}
